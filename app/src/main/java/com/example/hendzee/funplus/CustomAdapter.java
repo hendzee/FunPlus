@@ -30,6 +30,7 @@ public class CustomAdapter extends ArrayAdapter<DataItem>{
     static class DataHolder{
         ImageView imageIcon;
         TextView textValue;
+        TextView nameFood;
     }
 
     @NonNull
@@ -45,6 +46,7 @@ public class CustomAdapter extends ArrayAdapter<DataItem>{
             dataHolder = new DataHolder();
             dataHolder.imageIcon = (ImageView) convertView.findViewById(R.id.imageIcon);
             dataHolder.textValue = (TextView) convertView.findViewById(R.id.textValue);
+            dataHolder.nameFood = (TextView) convertView.findViewById(R.id.nameFood);
 
             convertView.setTag(dataHolder);
         }else{
@@ -53,7 +55,8 @@ public class CustomAdapter extends ArrayAdapter<DataItem>{
 
         DataItem dataItem = data.get(position);
         dataHolder.imageIcon.setImageResource(dataItem.resourceThumbnail);
-        dataHolder.textValue.setText("Value is " + dataItem.textValue);
+        dataHolder.nameFood.setText(dataItem.nameFood + ": ");
+        dataHolder.textValue.setText(dataItem.textValue);
 
         return convertView;
     }
