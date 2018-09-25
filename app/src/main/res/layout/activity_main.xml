@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -65,7 +66,9 @@
             android:text="A"
             android:textColor="#ff6b81"
             android:textSize="60sp"
-            app:fontFamily="@font/baloo" />
+            app:fontFamily="@font/baloo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp" />
 
         <TextView
             android:id="@+id/questionTotalResult"
@@ -82,7 +85,9 @@
             android:text="100"
             android:textColor="#ff6b81"
             android:textSize="30sp"
-            app:fontFamily="@font/baloo" />
+            app:fontFamily="@font/baloo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp" />
 
         <TextView
             android:id="@+id/textViewScoreResult"
@@ -99,7 +104,9 @@
             android:text="100"
             android:textColor="#ff6b81"
             android:textSize="30sp"
-            app:fontFamily="@font/baloo" />
+            app:fontFamily="@font/baloo"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="17dp" />
 
         <ImageView
             android:id="@+id/buttonPlayAgain"
@@ -138,8 +145,6 @@
         android:id="@+id/mainContain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/background_main"
         android:visibility="invisible">
 
@@ -188,6 +193,18 @@
             android:layout_toLeftOf="@+id/textViewScore"
             android:layout_toStartOf="@+id/textViewScore"
             app:srcCompat="@drawable/score_icon" />
+
+        <TextView
+            android:id="@+id/textViewTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewScore"
+            android:layout_toEndOf="@+id/imageTimer"
+            android:layout_toRightOf="@+id/imageTimer"
+            android:text="60"
+            android:textColor="#ff6b81"
+            android:textSize="30sp"
+            app:fontFamily="@font/baloo" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -366,18 +383,6 @@
             </RelativeLayout>
 
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textViewTimer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/textViewScore"
-            android:layout_toEndOf="@+id/imageTimer"
-            android:layout_toRightOf="@+id/imageTimer"
-            android:text="60"
-            android:textColor="#ff6b81"
-            android:textSize="30sp"
-            app:fontFamily="@font/baloo" />
 
     </RelativeLayout>
 </RelativeLayout>
